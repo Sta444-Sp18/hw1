@@ -36,10 +36,17 @@ $$ $$
 
 ### Question 3
 
-The deviance for deviance for a logistic regression model (bernoulli distribution, logit link) is given by the following formula,
+The deviance for a logistic regression model (bernoulli distribution, logit link) is given by the following formula,
 
-$$ D = \text{sign}(Y_i-\hat{p_i}) ~ 2 \sum_{i=1}^n \left(Y_i \log \frac{Y_i}{\hat{p}_i}+(1-Y_i)\log \frac{1-Y_i}{1 - \hat{p}_i}\right)  $$
-using the definition of deviance from class, derive this formula starting from the Bernoulli likelihood.
+$$
+D =  2 \sum_{i=1}^n \left(Y_i \log \frac{Y_i}{\hat{p}_i}+(1-Y_i)\log \frac{1-Y_i}{1 - \hat{p}_i}\right) = \sum_{i=1}^n d_i^2 \\
+$$
+with a single deviance residual therefore given by
+$$
+d_i = \text{sign}(Y_i-\hat{p_i}) ~ \sqrt{ 2 \left(Y_i \log \frac{Y_i}{\hat{p}_i}+(1-Y_i)\log \frac{1-Y_i}{1 - \hat{p}_i}\right) }
+$$
+using the definition of deviance from class, derive these formula starting from the Bernoulli likelihood.
+
 
 
 
